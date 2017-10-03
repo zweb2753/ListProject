@@ -2,7 +2,7 @@ package useful.controller;
 //Imports everything
 import java.util.List;
 import java.util.ArrayList;
-//imports useful.model
+//imports Donut to this class
 import useful.model.Donut;
 
 public class ToolController 
@@ -17,7 +17,7 @@ public class ToolController
 	
 	public void start()
 	{
-		//mes a new donut
+		//makes a new donut
 		Donut temp = new Donut();
 		
 		donutList.add(temp);
