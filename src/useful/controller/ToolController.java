@@ -77,5 +77,6 @@ public class ToolController
 		
 		display.displayText("There are" + donutList.size() + "Drink options");
 		
+		donutList.remove(andMilk);
 	}
 }
