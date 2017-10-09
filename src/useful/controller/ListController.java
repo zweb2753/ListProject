@@ -6,12 +6,12 @@ import java.util.ArrayList;
 import useful.model.Donut;
 import useful.view.PopupDisplay;
 
-public class ToolController 
+public class ListController 
 {
 	private List<Donut> donutList;
 	private PopupDisplay display;
 	
-	public ToolController()
+	public ListController()
 	{
 		//donutlist is a new array list
 		donutList = new ArrayList<Donut>();
@@ -68,6 +68,7 @@ public class ToolController
 	}
 	
 	private void practiceList()
+
 	{
 		Donut andMilk = new Donut("DonutandMilk");
 		Donut andChocolateMilk = new Donut("DonutandChocolateMilk");
@@ -78,5 +79,19 @@ public class ToolController
 		display.displayText("There are" + donutList.size() + "Drink options");
 		
 		donutList.remove(andMilk);
+		
+	}
+
+
+	public ArrayList<Donut> getDonutList()
+	{
+		return (ArrayList<Donut>) donutList;
+	}
+	
+	public PopupDisplay getDisplay()
+	{
+		return display;
 	}
 }
+
+
