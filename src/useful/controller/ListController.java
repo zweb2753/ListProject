@@ -76,10 +76,10 @@ public class ListController
 		donutList.add(andMilk);
 		donutList.add(andChocolateMilk);
 		
-		display.displayText("There are" + donutList.size() + "Drink options");
+		display.displayText("There are" + donutList.size() + "drink options");
 		
 		donutList.remove(andMilk);
-		
+		display.displayText("Drink option" + andMilk + "has been removed");
 	}
 
 
