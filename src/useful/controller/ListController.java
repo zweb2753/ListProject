@@ -22,8 +22,18 @@ public class ListController
 	{
 		//makes a new donut
 		Donut temp = new Donut();
+		ArrayList<String> tempList = new ArrayList<String>();
+		tempList.add("this is a word sequence");
+		tempList.add("DonutTestszip");
+		tempList.add("");
+		tempList.add("idk");
 		
-		donutList.add(temp);
+		display.displayText("The longest string in the tempListt is); " + maxLength(tempList) + " longest");
+		display.displayText("it is " + getLongestString(tempList));
+		//donutList
+				
+		
+		
 		fillTheList();
 		changeTheList();
 	}
@@ -65,6 +75,35 @@ public class ListController
 		display.displayText("The donut with flavor " + removed.getFlavor() + " has been removed");
 		
 		
+	}
+	
+	public int maxLength(ArrayList<String> myList)
+	{
+		int max = 0;
+		
+		for (int index = 0; index < myList.size(); index += 1)
+		{
+			if (max < myList.get(index).length())
+            {
+            	   max = myList.get(index).length();
+            }
+		}
+	    return max;
+	}
+	
+	public String getLongestString(ArrayList <String> myList)
+	{
+		String longest = "";
+		int max = 0;
+		
+		for (int index = 0; index < myList.size(); index += 1)
+		{
+			if (myList.get(index).length()> max)
+			{
+				max = myList.get(index).length();
+				longest = myList.get(index);
+			}
+		}
 	}
 	
 	private void practiceList()
